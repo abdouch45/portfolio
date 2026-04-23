@@ -11,6 +11,6 @@
   "description": "",
   "dependencies": {
     "express": "^5.2.1"
-      "ejs": "^3.x.x"
+    "ejs": "^5.0.2",
   }
 }
