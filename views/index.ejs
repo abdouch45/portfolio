@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="icon" href="/images/icon.png" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <title><%= name %> | Portfolio</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<%- include("partials/header") %>
+
+<section id="home"  class="hero">
+  <h1><%= name %></h1>
+  <h2><%= role %></h2>
+  <p><%= description %></p>
+</section>
+
+<section id="projects" class="projects">
+  <h3>Projects</h3>
+
+  <div class="project-grid">
+    <% projects.forEach(project => { %>
+      <div class="project-card">
+        <span class="category"><%= project.category %></span>
+        <h4><%= project.title %></h4>
+        <span class="date"><%= project.date %></span>
+        <p><%= project.description %></p>
+
+        <div class="tech">
+          <% project.tech.forEach(t => { %>
+            <span><%= t %></span>
+          <% }) %>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</section>
+
+<section id="experience"  class="experience">
+  <h3>Professional Experience</h3>
+
+  <div class="experience-list">
+    <% experience.forEach(exp => { %>
+      <div class="experience-card">
+        <h4><%= exp.role %></h4>
+        <span class="company"><%= exp.company %></span>
+        <span class="date"><%= exp.date %></span>
+
+        <ul>
+          <% exp.description.forEach(item => { %>
+            <li><%= item %></li>
+          <% }) %>
+        </ul>
+      </div>
+    <% }) %>
+  </div>
+</section>
+
+
+<%- include("partials/footer") %>
+
+</body>
+</html>

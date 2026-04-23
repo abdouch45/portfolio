@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+:root {
+  --bg: #0b0f14;
+  --primary: #00ff9c;
+  --secondary: #00b3ff;
+  --text: #c9d1d9;
+  --card: #111827;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid #1f2933;
+}
+
+.logo {
+  color: var(--primary);
+}
+
+.navbar a {
+  color: var(--text);
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: var(--secondary);
+}
+
+/* Hero */
+.hero {
+  padding: 80px 40px;
+}
+
+.hero h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+}
+
+.hero h2 {
+  color: var(--secondary);
+  margin-top: 10px;
+}
+
+.hero p {
+  max-width: 900px;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* Projects */
+.projects {
+  padding: 60px 40px;
+}
+
+.projects h3 {
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--card);
+  padding: 20px;
+  border: 1px solid #1f2933;
+  border-radius: 6px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 255, 156, 0.15);
+}
+
+.category {
+  color: var(--secondary);
+  font-size: 0.8rem;
+}
+
+.date {
+  display: block;
+  margin: 10px 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.tech span {
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  padding: 4px 8px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-size: 0.75rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid #1f2933;
+  margin-top: 60px;
+  font-size: 0.8rem;
+}
+
+
+/* Experience */
+.experience {
+  padding: 60px 40px;
+}
+
+.experience h3 {
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.experience-card {
+  background: var(--card);
+  padding: 20px;
+  border: 1px solid #1f2933;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.experience-card h4 {
+  color: var(--secondary);
+}
+
+.company {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.experience-card ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.experience-card li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
